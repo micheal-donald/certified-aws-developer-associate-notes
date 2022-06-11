@@ -70,6 +70,7 @@ EBS Snapshots
         * Resizing a volume down
         * Changing the volume type
         * Encrypt a volume
+ * Rules can be set for a recycle bin to retain between 1day - 1year
 
 #### EBS Encryption
 * When you create an encrypted EBS volume, you get the following:

@@ -18,26 +18,33 @@
     * You can increase the capacity of the drive over time
 
 #### EBS Volume Types
-- EBS Volumes come in 4 types 
+- EBS Volumes come 2 categories
+- EBS Volumes are characterized in Size | Throughput | IOPS
+   ##### SSD 
 - GP2 (SSD): General purpose SSD volume that balances price and performance for a wide variety of workloads 
+- GP3 (SSD): Newer general purpose SSD (IOPS and throughput can be increased independently) 
 - IO1 (SSD): Highest-performance SSD volume for mission-critical low-latency or high- throughput workloads 
+- IO2 (SSD): Newer generation with sustained IOPS perfomance (Provisioned IOPS), supports multi attach
+   ##### HDD
 - ST1 (HDD): Low cost HDD volume designed for frequently accessed, throughput- intensive workloads 
 - SC1 (HDD): Lowest cost HDD volume designed for less frequently accessed workloads 
-- EBS Volumes are characterized in Size | Throughput | IOPS
+
 - When in doubt always consult the AWS documentation
 -  Only GP2 and IO1 can be used as boot volumes
 
 #### EBS Volume Types Use Cases
-1. GP2
+1. GP2 /GP3
 - Recommended for most workloads 
 - System boot volumes
 - Virtual desktops
 - Low-latency interactive apps
 - Development and test environments
 
-2. IO1
+2. IO1 / IO2
 - Critical business applications that require sustained IOPS performance, or more than 16,000 IOPS per volume (gp2 limit)
 -  Large database workloads, such as: MongoDB, Cassandra, Microsoft SQL Server, MySQL, PostgreSQL, Oracle
+-  Multi-attach to multiple EC2 instances in the same availability zone.
+      - must use filesystem thats cluster-aware
 
 3. ST1
 - Streaming workloads requiring consistent, fast throughput at a low price. 

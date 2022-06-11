@@ -24,5 +24,6 @@
 - EFS-IA, Infrequently accessed
 
 ## Availability and Durability
-- Regional
-- EFS One zone -IA
+- Regional, stores data redundantly across multiple az
+- EFS One zone, stores data redundantly in one AZ
+- EFS One zone - IA

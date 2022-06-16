@@ -61,8 +61,8 @@ It costs less to setup your own load balancer but it will be a lot more effort o
 * Operates at layer 3
 * Used when you deploy, scale and manage 3rd party nework virtual appliances.
 * Functions to:
- * Transport network gateway - single entry/exit for all traffic
- * Load balances to your virual appliance
+  * Transport network gateway - single entry/exit for all traffic
+  * Load balances to your virual appliance
 * Uses GENEVE protocol on port 6081
 
 #### Load Balancers Good to Know
@@ -73,3 +73,9 @@ It costs less to setup your own load balancer but it will be a lot more effort o
 * 5xx errors are application induced errors
     * Load balancer Errors 503 means at capacity or no registered target
 * If the LB can’t connect to your application, check your security
+
+#### Stickines
+* Helps bind client sessions to specific instances
+* Two types
+  * Load balancer generated cookies (Duration Based Cookies)
+  * Application based cookies

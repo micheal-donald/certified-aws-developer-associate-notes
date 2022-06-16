@@ -76,6 +76,7 @@ It costs less to setup your own load balancer but it will be a lot more effort o
 
 #### Stickines
 * Helps bind client sessions to specific instances
+* Enabled on target group attributes
 * Two types
   * Load balancer generated cookies (Duration Based Cookies)
   * Application based cookies

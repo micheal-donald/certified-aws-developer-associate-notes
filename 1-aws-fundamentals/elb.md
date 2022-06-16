@@ -57,6 +57,14 @@ It costs less to setup your own load balancer but it will be a lot more effort o
 * Network Load Balancers are mostly used for extreme performance and should not be the default load balancer you choose
 * Overall, the creation process is the same as the Application Load Balancer
 
+#### Gateway Load Balance (GWLB)
+* Operates at layer 3
+* Used when you deploy, scale and manage 3rd party nework virtual appliances.
+* Functions to:
+ * Transport network gateway - single entry/exit for all traffic
+ * Load balances to your virual appliance
+* Uses GENEVE protocol on port 6081
+
 #### Load Balancers Good to Know
 * Any Load Balancer (CLB, ALB, NLB) has a static host name. They do not resolve and use underlying IP
 * LBs can scale but not instantaneously - contact AWS for a “warm up”
